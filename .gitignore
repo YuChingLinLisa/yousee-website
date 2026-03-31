@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Node portable
+node.zip
+node-v20.12.2-win-x64/
