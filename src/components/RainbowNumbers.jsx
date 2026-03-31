@@ -63,9 +63,6 @@ const RainbowNumbers = () => {
             ))}
             <div style={{ textAlign: 'center', marginTop: '20px', color: 'var(--text-muted)', fontSize: '0.9rem', fontStyle: 'italic', lineHeight: '1.8' }}>
               ...及更多隱藏在 6-0 與流年位格中的精密代碼<br />
-              <a href="https://line.me/R/oaMessage/@545trppy/?領取2026能量關鍵字" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-secondary)', textDecoration: 'none', borderBottom: '1px solid var(--color-secondary)', fontStyle: 'normal', fontWeight: 400, display: 'inline-block', marginTop: '12px' }}>
-                立即領取 2026 流年戰略解析（LINE 限定）
-              </a>
             </div>
           </div>
 

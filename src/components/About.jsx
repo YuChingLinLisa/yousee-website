@@ -6,7 +6,7 @@ const About = () => {
     <section id="about" className="section">
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 300, letterSpacing: '0.05em' }}>關於 <span style={{ color: 'var(--color-secondary)', fontWeight: 400 }}>有序</span></h2>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 300, letterSpacing: '0.05em' }}>關於<span style={{ color: 'var(--color-secondary)', fontWeight: 400 }}>有序</span></h2>
           <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1rem', lineHeight: '2.0', letterSpacing: '0.03em', color: 'rgba(255,255,255,0.7)' }}>在混亂的關係與選擇中，看見生命運行的隱形秩序</p>
         </div>
 

@@ -7,9 +7,9 @@ const Services = () => {
       <div className="container">
         {/* 標題區：強化系統感與釐清的體感 */}
         <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 300, letterSpacing: '0.05em' }}>讀懂行為原始碼 優化決策路徑</h2>
+          <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 300, letterSpacing: '0.05em' }}>讀懂行為原始碼<br />優化決策路徑</h2>
           <p style={{ maxWidth: '700px', margin: '20px auto 0', color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: '2.0', letterSpacing: '0.03em' }}>
-            透過系統化的解碼服務，深入探索內在設定，讓「有序」協助你從混沌中釐清脈絡。
+            透過系統化的解碼服務，深入探索內在設定，讓「有序」協助你從混沌中釐清脈絡
           </p>
         </div>
 
@@ -61,7 +61,7 @@ const Services = () => {
 
         <div style={{ textAlign: 'center', marginTop: '64px' }}>
           <a
-            href="https://line.me/R/oaMessage/@545trppy/?預約諮詢"
+            href="https://line.me/R/oaMessage/@545trppy/?預約有序"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-solid"

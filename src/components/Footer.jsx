@@ -9,7 +9,7 @@ const Footer = () => {
           <div style={{ flex: '1 1 250px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
               <Compass color="var(--color-secondary)" />
-              <span style={{ fontSize: '1.5rem', fontWeight: 400, color: 'var(--color-secondary)', letterSpacing: '0.05em' }}>有序 yousee</span>
+              <span style={{ fontSize: '1.5rem', fontWeight: 400, color: 'var(--color-secondary)', letterSpacing: '0.05em' }}>有序 YouSee</span>
             </div>
             <p style={{ maxWidth: '300px', fontSize: '0.95rem', lineHeight: '2.0', letterSpacing: '0.03em' }}>透過彩虹數字，我們陪你從數字看見行為慣性，在關鍵時刻做出更適合的選擇</p>
           </div>
