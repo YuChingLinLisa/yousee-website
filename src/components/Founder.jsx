@@ -44,7 +44,7 @@ const Founder = () => {
               </p>
 
               <a
-                href="https://line.me/R/oaMessage/@545trppy/?我想領取我的 2026 專屬能量關鍵字"
+                href={`https://line.me/R/oaMessage/@545trppy/?${encodeURIComponent('我想領取我的 2026 專屬能量關鍵字')}`}
                 className="btn btn-solid"
               >
                 <Compass size={20} />

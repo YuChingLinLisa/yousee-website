@@ -18,7 +18,7 @@ const Footer = () => {
             <h4 style={{ color: 'white', marginBottom: '16px' }}>關注更多</h4>
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
               <a href="https://www.instagram.com/yousee_rainbow_numen?igsh=cW1ta3RnbWpma3pz&utm_source=qr" target="_blank" rel="noopener noreferrer" className="btn btn-glass">查看 IG 日常</a>
-              <a href="https://line.me/R/oaMessage/@545trppy/?我想領取我的 2026 專屬能量關鍵字" target="_blank" rel="noopener noreferrer" className="btn btn-glass">前往 LINE 領取能量關鍵字</a>
+              <a href={`https://line.me/R/oaMessage/@545trppy/?${encodeURIComponent('我想領取我的 2026 專屬能量關鍵字')}`} target="_blank" rel="noopener noreferrer" className="btn btn-glass">前往 LINE 領取能量關鍵字</a>
             </div>
           </div>
         </div>
