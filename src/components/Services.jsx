@@ -61,7 +61,7 @@ const Services = () => {
 
         <div style={{ textAlign: 'center', marginTop: '64px' }}>
           <a
-            href="https://line.me/R/oaMessage/@545trppy/?預約有序"
+            href="https://line.me/R/oaMessage/@545trppy/?我想預約「有序」解碼諮詢"
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-solid"
