@@ -22,14 +22,14 @@ const shortItems = [
 export default function About() {
   return (
     <section id="about" className="section">
-      <div className="container container-narrow">
+      <div className="container">
         
         {/* 只回答：你怎麼陪我？ */}
         <div style={{ textAlign: 'center', marginBottom: '44px' }}>
           <h2 className="section-title">
             有序，陪你多看見一點自己
           </h2>
-          <div className="section-desc" style={{ maxWidth: '720px', marginBottom: '40px' }}>
+          <div className="section-desc" style={{ maxWidth: '780px', marginBottom: '40px' }}>
             <p style={{ marginBottom: '14px' }}>
               關係裡的情緒，常常不是突然出現的。它可能和我們習慣如何理解自己、保護自己，以及與他人互動的方式有關。
             </p>
@@ -42,12 +42,8 @@ export default function About() {
           </div>
         </div>
 
-        {/* 三個短項目 */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-          gap: '24px'
-        }}>
+        {/* 三個短項目：強制桌面版 3 欄並排 */}
+        <div className="three-cards-grid">
           {shortItems.map((item, idx) => (
             <div 
               key={idx}
@@ -82,6 +78,19 @@ export default function About() {
         </div>
 
       </div>
+
+      <style>{`
+        .three-cards-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+        @media (max-width: 860px) {
+          .three-cards-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
     </section>
   );
 }

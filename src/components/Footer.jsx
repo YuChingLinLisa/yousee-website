@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageCircle, ExternalLink } from 'lucide-react';
 
-const LINE_URL = "https://line.me/R/oaMessage/@545trppy/?我想預約有序的公益諮詢";
+const LINE_URL = "https://line.me/R/ti/p/@545trppy";
 const IG_URL = "https://instagram.com/yousee_rainbow_numen";
 
 export default function Footer() {

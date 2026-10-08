@@ -14,7 +14,7 @@ export default function Founder() {
 
           <div style={{ color: 'var(--color-cream-light)', lineHeight: 1.85, fontSize: '1rem', maxWidth: '640px', margin: '0 auto 28px auto' }}>
             <p style={{ marginBottom: '16px' }}>
-              我曾經也在關係裡反覆困惑，直到透過彩虹數字，開始理解那些情緒與反應背後的脈絡。
+              我曾經也在關係裡反覆困惑，直到透過彩虹數字，開始理解情緒與反應背後的脈絡。
             </p>
             <p style={{ margin: 0 }}>
               有序不是要你變成一個完美的人，是陪你在每一次看見之後，更靠近自己一點。

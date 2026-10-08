@@ -9,10 +9,6 @@ import Founder from './components/Founder';
 import FAQ from './components/FAQ';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
-import { MessageCircle, ArrowRight } from 'lucide-react';
-
-const LINE_BOOKING_URL = "https://line.me/R/oaMessage/@545trppy/?我想預約有序的公益諮詢";
-
 export default function App() {
   return (
     <div className="app-root">
@@ -48,21 +44,6 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Mobile Sticky Bottom Bar */}
-      <div className="mobile-sticky-bar">
-        <a 
-          href={LINE_BOOKING_URL} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="btn btn-primary"
-          style={{ width: '100%', padding: '12px 20px', fontSize: '0.95rem' }}
-        >
-          <MessageCircle size={18} />
-          <span>預約 40 分鐘公益諮詢 (LINE)</span>
-          <ArrowRight size={16} />
-        </a>
-      </div>
     </div>
   );
 }

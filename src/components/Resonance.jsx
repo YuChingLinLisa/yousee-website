@@ -34,12 +34,7 @@ export default function Resonance() {
         </div>
 
         {/* 3 張精簡卡片（只顯示標題） */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-          gap: '20px',
-          marginBottom: '36px'
-        }}>
+        <div className="resonance-cards-grid">
           {cards.map((item, idx) => (
             <div 
               key={idx} 
@@ -79,6 +74,20 @@ export default function Resonance() {
         </div>
 
       </div>
+
+      <style>{`
+        .resonance-cards-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          margin-bottom: 36px;
+        }
+        @media (max-width: 860px) {
+          .resonance-cards-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      `}</style>
     </section>
   );
 }

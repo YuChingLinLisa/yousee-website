@@ -216,37 +216,15 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
-/* Mobile Sticky Bottom CTA Bar */
-.mobile-sticky-bar {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px 20px;
-  background: rgba(0, 36, 40, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-top: 1px solid var(--border-subtle);
-  z-index: 100;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.4);
-}
-
-@media (max-width: 768px) {
-  .mobile-sticky-bar {
-    display: flex;
-  }
-  body {
-    padding-bottom: 72px; /* space for sticky bar */
-  }
-}
 
 /* FAQ Accordion Styling */
 .faq-item {
   border-bottom: 1px solid var(--border-subtle);
   transition: all 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-trigger {

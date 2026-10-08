@@ -29,7 +29,7 @@ export default function FinalCTA() {
           lineHeight: 1.8,
           letterSpacing: '0.05em'
         }}>
-          不需要先把故事整理完整，從你此刻最想理解的地方開始就好。
+          不需要先把故事整理完整，從你現在最想理解的地方開始就好。
         </p>
 
         <div>
