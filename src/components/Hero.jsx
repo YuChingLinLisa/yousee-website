@@ -1,43 +1,82 @@
 import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
-const Hero = () => {
+const LINE_BOOKING_URL = "https://line.me/R/oaMessage/@545trppy/?我想預約有序的公益諮詢";
+
+export default function Hero() {
   return (
-    <section className="section" style={{ minHeight: '85vh', display: 'flex', alignItems: 'center', background: 'radial-gradient(circle at center, rgba(172, 14, 14, 0.05) 0%, transparent 70%)' }}>
-      <div className="container">
-        <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-
-          {/* Top Tag - 建立定位 */}
-          <div className="fade-in-up" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '10px 20px', borderRadius: '100px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', marginBottom: '32px', fontSize: '0.9rem', fontWeight: 500, letterSpacing: '0.05em' }}>
-            <Sparkles size={16} color="var(--color-primary)" />
-            <span style={{ color: 'rgba(255,255,255,0.9)' }}>大人的人生脈絡指南</span>
-          </div>
-
-          {/* Main Hook - 解決痛點 */}
-          <h1 className="fade-in-up delay-100" style={{ fontSize: 'clamp(1.8rem, 4vw, 3.2rem)', fontWeight: 300, letterSpacing: '0.05em', lineHeight: '1.4', marginBottom: '32px' }}>
-            看見生命程式的<span style={{ color: 'var(--color-secondary)', fontWeight: 400 }}>有序</span><br />
-            在關鍵時刻做出<span style={{ color: 'var(--text-main)', borderBottom: '1px solid var(--color-secondary)' }}>合適選擇</span>
-          </h1>
-
-          {/* Description - 建立價值 */}
-          <p className="fade-in-up delay-200" style={{ fontSize: 'clamp(0.95rem, 1.5vw, 1.15rem)', color: 'rgba(255,255,255,0.7)', lineHeight: '2.0', letterSpacing: '0.03em', marginBottom: '48px', maxWidth: '700px', margin: '0 auto 48px auto' }}>
-            不是算命，而是解開出生年月日時分的程式密碼<br />
-            陪你釐清行為慣性與生命階段，將主導權還給自己
-          </p>
-
-          {/* CTA Buttons - 引導行動 */}
-          <div className="fade-in-up delay-300" style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#service" className="btn btn-outline">
-              查看各項解碼服務 <ArrowRight size={18} />
-            </a>
-            <a href="#about" className="btn btn-glass">
-              了解有序經營理念
-            </a>
+    <section className="section" style={{ paddingTop: '130px', paddingBottom: '90px' }}>
+      <div className="container" style={{ textAlign: 'center' }}>
+        
+        {/* Brand Tag */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '24px' }}>
+          <div className="section-tag">
+            <Sparkles size={14} />
+            <span>有序 YouSee</span>
           </div>
         </div>
+
+        {/* Main Title */}
+        <h1 
+          className="font-serif" 
+          style={{ 
+            fontSize: 'clamp(2.4rem, 5vw, 4rem)', 
+            marginBottom: '24px',
+            color: 'var(--text-primary)',
+            letterSpacing: '0.04em',
+            lineHeight: 1.25
+          }}
+        >
+          陪你翻譯關係裡的情緒
+        </h1>
+
+        {/* Subtitle */}
+        <p 
+          style={{ 
+            fontSize: 'clamp(1.1rem, 2vw, 1.35rem)', 
+            color: 'var(--color-cream-light)', 
+            maxWidth: '680px', 
+            margin: '0 auto 20px auto',
+            lineHeight: 1.7,
+            opacity: 0.95
+          }}
+        >
+          以彩虹數字為入口，理解自己在關係中的感受、反應與需要，整理此刻的自己。
+        </p>
+
+        {/* Note / Boundary */}
+        <p 
+          style={{ 
+            fontSize: '0.95rem', 
+            color: 'var(--color-muted-grey)', 
+            maxWidth: '560px', 
+            margin: '0 auto 40px auto',
+            lineHeight: 1.6
+          }}
+        >
+          不是算命，也不是替你預測命運，而是一種陪你多看見自己的自我覺察工具。
+        </p>
+
+        {/* Action Buttons */}
+        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a 
+            href={LINE_BOOKING_URL} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-primary"
+          >
+            <span>預約公益諮詢</span>
+            <ArrowRight size={18} />
+          </a>
+          <a 
+            href="#about" 
+            className="btn btn-secondary"
+          >
+            <span>認識有序</span>
+          </a>
+        </div>
+
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

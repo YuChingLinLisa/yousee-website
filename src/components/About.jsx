@@ -1,43 +1,89 @@
 import React from 'react';
-import { Compass, Moon, Sun } from 'lucide-react';
+import { Compass, Sparkles, SlidersHorizontal } from 'lucide-react';
 
-const About = () => {
+const coreFeatures = [
+  {
+    icon: <Compass size={28} style={{ color: 'var(--color-bright-yellow)' }} />,
+    title: "看見自己的反應",
+    desc: "理解自己在關係裡如何感受、表達與保護自己，看懂那些下意識的防衛或退縮。"
+  },
+  {
+    icon: <Sparkles size={28} style={{ color: 'var(--color-bright-yellow)' }} />,
+    title: "翻譯情緒背後的需要",
+    desc: "不急著否定情緒，而是一起看看情緒想告訴你的事情，釐清自己心底真正渴望的連結。"
+  },
+  {
+    icon: <SlidersHorizontal size={28} style={{ color: 'var(--color-bright-yellow)' }} />,
+    title: "找回選擇的空間",
+    desc: "當你理解自己，就能少一點自動化的受挫反應，多一點適合自己、更踏實的應對選擇。"
+  }
+];
+
+export default function About() {
   return (
     <section id="about" className="section">
       <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 300, letterSpacing: '0.05em' }}>關於<span style={{ color: 'var(--color-secondary)', fontWeight: 400 }}>有序</span></h2>
-          <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1rem', lineHeight: '2.0', letterSpacing: '0.03em', color: 'rgba(255,255,255,0.7)' }}>在混亂的關係與選擇中，看見生命運行的隱形秩序</p>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
-          <div className="glass" style={{ padding: '40px', textAlign: 'center' }}>
-            <div style={{ margin: '0 auto 24px', width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Compass size={32} color="var(--color-secondary)" />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 400, letterSpacing: '0.05em' }}>解碼生命程式</h3>
-            <p style={{ fontSize: '0.95rem', lineHeight: '2.0' }}>出生年月日時分是你來到地球時設定好的生命程式。解讀數字背後的語言，為你釐清脈絡，將迷惘轉化為清晰的生命地圖</p>
+        
+        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div className="section-tag">
+            <span>ABOUT YOUSEE</span>
           </div>
-
-          <div className="glass" style={{ padding: '40px', textAlign: 'center' }}>
-            <div style={{ margin: '0 auto 24px', width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Sun size={32} color="var(--color-secondary)" />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 400, letterSpacing: '0.05em' }}>理解與修正行為</h3>
-            <p style={{ fontSize: '0.95rem', lineHeight: '2.0' }}>修行，就是在生活中修正自己的行為。看見能量等級，從慣性掙扎轉向高階發揮。當你了解自己的能量與挑戰，選擇權就回到了你的手中</p>
-          </div>
-
-          <div className="glass" style={{ padding: '40px', textAlign: 'center' }}>
-            <div style={{ margin: '0 auto 24px', width: '64px', height: '64px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Moon size={32} color="var(--color-secondary)" />
-            </div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 400, letterSpacing: '0.05em' }}>做出適合的選擇</h3>
-            <p style={{ fontSize: '0.95rem', lineHeight: '2.0' }}>理解內在藍圖，停止心理內耗。協助你在關係與人生轉捩點，對齊內在頻率，做出最適合當下的決定</p>
+          <h2 className="section-title">
+            關於有序
+          </h2>
+          <div className="section-desc">
+            <p style={{ marginBottom: '16px' }}>
+              我們都曾在關係裡感到困惑。明明在意，卻不知道該怎麼說；明明想靠近，卻一次次退開；明明知道自己不想這樣，卻又重複做出熟悉的反應。
+            </p>
+            <p style={{ marginBottom: '16px' }}>
+              有序相信，這些情緒與行為背後，都有值得被理解的脈絡。
+            </p>
+            <p style={{ color: 'var(--color-cream-light)' }}>
+              我們以彩虹數字為入口，陪你看見自己在關係、工作與生活中的慣性，理解那些反覆出現的感受與選擇，讓你在重要時刻，多一個看見自己的角度。
+            </p>
           </div>
         </div>
+
+        {/* 3 Core Pillars */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '28px'
+        }}>
+          {coreFeatures.map((feat, idx) => (
+            <div 
+              key={idx} 
+              className="glass-card" 
+              style={{ 
+                borderTop: '3px solid var(--color-secondary-teal)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '16px'
+              }}
+            >
+              <div style={{
+                width: '52px',
+                height: '52px',
+                borderRadius: '14px',
+                background: 'rgba(16, 82, 67, 0.4)',
+                border: '1px solid var(--border-subtle)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                {feat.icon}
+              </div>
+              <h3 style={{ fontSize: '1.3rem', color: 'var(--text-primary)', marginBottom: 0 }}>
+                {feat.title}
+              </h3>
+              <p style={{ color: 'var(--color-muted-grey)', fontSize: '0.98rem', lineHeight: 1.7, marginBottom: 0 }}>
+                {feat.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
-};
-
-export default About;
+}

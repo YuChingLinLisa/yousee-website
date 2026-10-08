@@ -1,34 +1,123 @@
 import React from 'react';
-import { Compass } from 'lucide-react';
+import { MessageCircle, ExternalLink } from 'lucide-react';
 
-const Footer = () => {
+const LINE_URL = "https://line.me/R/oaMessage/@545trppy/?我想預約有序的公益諮詢";
+const IG_URL = "https://instagram.com/yousee_rainbow_numen";
+
+export default function Footer() {
   return (
-    <footer style={{ borderTop: '1px solid rgba(255,255,255,0.05)', padding: '64px 0 32px 0', marginTop: '64px' }}>
+    <footer style={{
+      borderTop: '1px solid var(--border-subtle)',
+      backgroundColor: '#002428',
+      padding: '60px 0 30px 0',
+      color: 'var(--color-muted-grey)',
+      fontSize: '0.92rem'
+    }}>
       <div className="container">
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '32px', justifyContent: 'space-between', marginBottom: '64px' }}>
-          <div style={{ flex: '1 1 250px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
-              <Compass color="var(--color-secondary)" />
-              <span style={{ fontSize: '1.5rem', fontWeight: 400, color: 'var(--color-secondary)', letterSpacing: '0.05em' }}>有序 YouSee</span>
+        
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-start',
+          flexWrap: 'wrap',
+          gap: '40px',
+          marginBottom: '50px'
+        }}>
+          
+          {/* Brand Info */}
+          <div style={{ maxWidth: '360px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
+              <img src="/yousee-logo.png" alt="有序 YouSee" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
+              <span style={{ fontSize: '1.25rem', color: 'var(--text-primary)', fontFamily: 'var(--font-serif)', fontWeight: 600 }}>
+                有序 YouSee
+              </span>
             </div>
-            <p style={{ maxWidth: '300px', fontSize: '0.95rem', lineHeight: '2.0', letterSpacing: '0.03em' }}>透過彩虹數字，我們陪你從數字看見行為慣性，在關鍵時刻做出更適合的選擇</p>
+            <p style={{ margin: 0, lineHeight: 1.7, color: 'var(--color-muted-grey)' }}>
+              以彩虹數字為入口，陪你理解關係裡的情緒，看見自己的反應與需要，整理此刻的自己。
+            </p>
           </div>
 
-          <div style={{ flex: '1 1 200px' }}>
-            <h4 style={{ color: 'white', marginBottom: '16px' }}>關注更多</h4>
-            <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
-              <a href="https://www.instagram.com/yousee_rainbow_numen?igsh=cW1ta3RnbWpma3pz&utm_source=qr" target="_blank" rel="noopener noreferrer" className="btn btn-glass">查看 IG 日常</a>
-              <a href={`https://line.me/R/oaMessage/@545trppy/?${encodeURIComponent('我想領取我的 2026 專屬能量關鍵字')}`} target="_blank" rel="noopener noreferrer" className="btn btn-glass">前往 LINE 領取能量關鍵字</a>
+          {/* Quick Links & Contact */}
+          <div>
+            <h4 style={{ color: 'var(--text-primary)', fontSize: '1rem', marginBottom: '16px' }}>快速連結</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              <a href="#about" style={{ color: 'var(--color-muted-grey)', textDecoration: 'none' }}>關於有序</a>
+              <a href="#services" style={{ color: 'var(--color-muted-grey)', textDecoration: 'none' }}>服務說明</a>
+              <a href="#consultation" style={{ color: 'var(--color-muted-grey)', textDecoration: 'none' }}>公益諮詢</a>
+              <a href="#faq" style={{ color: 'var(--color-muted-grey)', textDecoration: 'none' }}>常見問題</a>
             </div>
           </div>
+
+          {/* Social Channels */}
+          <div>
+            <h4 style={{ color: 'var(--text-primary)', fontSize: '1rem', marginBottom: '16px' }}>官方社群</h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <a 
+                href={LINE_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '8px', 
+                  color: 'var(--color-cream-light)', 
+                  textDecoration: 'none',
+                  background: 'rgba(16, 82, 67, 0.4)',
+                  padding: '8px 16px',
+                  borderRadius: '100px',
+                  border: '1px solid var(--border-subtle)'
+                }}
+              >
+                <MessageCircle size={18} style={{ color: 'var(--color-bright-yellow)' }} />
+                <span>LINE 官方帳號 (@545trppy)</span>
+              </a>
+
+              <a 
+                href={IG_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  gap: '8px', 
+                  color: 'var(--color-muted-grey)', 
+                  textDecoration: 'none',
+                  padding: '4px 8px'
+                }}
+              >
+                {/* Clean SVG for Instagram */}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <span>Instagram (@yousee_rainbow_numen)</span>
+              </a>
+            </div>
+          </div>
+
         </div>
 
-        <div style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '32px', color: 'var(--text-muted)' }}>
-          <p>© {new Date().getFullYear()} 有序 yousee. All rights reserved.</p>
+        {/* Disclaimer & Copyright */}
+        <div style={{
+          borderTop: '1px solid rgba(240, 245, 207, 0.08)',
+          paddingTop: '24px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '16px',
+          fontSize: '0.82rem'
+        }}>
+          <p style={{ margin: 0 }}>
+            © {new Date().getFullYear()} 有序 YouSee. All rights reserved.
+          </p>
+          <p style={{ margin: 0, color: 'rgba(174, 176, 177, 0.7)' }}>
+            本站所有服務為自我覺察與整理輔助工具，非醫療與心理諮商行為。
+          </p>
         </div>
+
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

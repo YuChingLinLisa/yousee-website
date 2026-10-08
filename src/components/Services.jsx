@@ -1,77 +1,182 @@
 import React from 'react';
-import { FileCode, Users, Video, Compass, ExternalLink } from 'lucide-react';
+import { ArrowRight, Lock, Sparkles, Heart } from 'lucide-react';
 
-const Services = () => {
+export default function Services() {
   return (
-    <section id="service" className="section" style={{ background: 'rgba(0,0,0,0.1)' }}>
+    <section id="services" className="section">
       <div className="container">
-        {/* 標題區：強化系統感與釐清的體感 */}
-        <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-          <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.2rem)', fontWeight: 300, letterSpacing: '0.05em' }}>讀懂行為原始碼<br />優化決策路徑</h2>
-          <p style={{ maxWidth: '700px', margin: '20px auto 0', color: 'rgba(255,255,255,0.7)', fontSize: '1rem', lineHeight: '2.0', letterSpacing: '0.03em' }}>
-            透過系統化的解碼服務，深入探索內在設定，讓「有序」協助你從混沌中釐清脈絡
-          </p>
+        
+        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div className="section-tag">
+            <span>START HERE</span>
+          </div>
+          <h2 className="section-title">
+            你現在，想理解哪一部分的自己？
+          </h2>
+          <div className="section-desc">
+            <span style={{ 
+              display: 'inline-block',
+              background: 'rgba(248, 227, 71, 0.12)', 
+              color: 'var(--color-bright-yellow)', 
+              padding: '6px 18px', 
+              borderRadius: '99px',
+              fontSize: '0.95rem',
+              fontWeight: 500,
+              border: '1px solid rgba(248, 227, 71, 0.3)'
+            }}>
+              ✨ 目前開放：40 分鐘線上公益諮詢
+            </span>
+          </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '32px' }}>
-
-          {/* 服務一：密碼檔案程式 (完全移除生命、人生、天賦字眼) */}
-          <div className="glass" style={{ padding: '48px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', height: '100%', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <div style={{ marginBottom: '28px', display: 'inline-flex', padding: '16px', borderRadius: '20px', background: 'rgba(255, 255, 255, 0.05)' }}>
-              <Users size={32} color="var(--color-secondary)" />
-            </div>
-            <h3 style={{ fontSize: '1.3rem', fontWeight: 400, marginBottom: '16px', color: 'white', letterSpacing: '0.05em' }}>關係解碼</h3>
-            <p style={{ flex: 1, color: 'rgba(255,255,255,0.6)', lineHeight: '2.0', fontSize: '0.95rem' }}>
-              衝突常源於邏輯不相容。透過合盤拆解溝通與安全感的落差，釐清行為地雷，將摩擦轉化為理性交流，讓重要關係回歸穩定、有序的頻率
-            </p>
-          </div>
-
-          {/* 服務二：1對1 深度解碼 (完全移除生命、人生、天賦字眼) */}
-          <div className="glass" style={{
-            padding: '48px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            textAlign: 'center',
-            height: '100%',
-            border: '1px solid rgba(255,255,255,0.1)',
-            background: 'linear-gradient(180deg, rgba(16,82,67,0.7) 0%, rgba(172,14,14,0.1) 100%)'
-          }}>
-            <div style={{ marginBottom: '28px', display: 'inline-flex', padding: '16px', borderRadius: '20px', background: 'rgba(255,255,255,0.05)' }}>
-              <FileCode size={32} color="var(--color-secondary)" />
-            </div>
-            <h3 style={{ fontSize: '1.3rem', fontWeight: 400, marginBottom: '16px', color: 'white', letterSpacing: '0.05em' }}>心性解碼</h3>
-            <p style={{ flex: 1, color: 'rgba(255,255,255,0.9)', lineHeight: '2.0', fontSize: '0.95rem' }}>
-              透過出生日期解析行為程式，客觀梳理你的優勢特質、壓力反應與決策慣性。找回個人說明書，用最省力的方式在生活中發揮實力
-            </p>
-          </div>
-
-          {/* 服務三：不定期沙龍 (性質調整：認識自己與數字) */}
-          <div className="glass" style={{ padding: '48px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', height: '100%', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <div style={{ marginBottom: '28px', display: 'inline-flex', padding: '16px', borderRadius: '20px', background: 'rgba(255, 255, 255, 0.05)' }}>
-              <Compass size={32} color="var(--color-secondary)" />
-            </div>
-            <h3 style={{ fontSize: '1.3rem', fontWeight: 400, marginBottom: '16px', color: 'white', letterSpacing: '0.05em' }}>時間解碼</h3>
-            <p style={{ flex: 1, color: 'rgba(255,255,255,0.6)', lineHeight: '2.0', fontSize: '0.95rem' }}>
-              努力更要看準時機。解析流年位格，判斷適合「開拓」或「深耕」的發展節奏。掌握年度戰略週期，讓行動精準對焦，不再盲目努力
-            </p>
-          </div>
-
-        </div>
-
-        <div style={{ textAlign: 'center', marginTop: '64px' }}>
-          <a
-            href={`https://line.me/R/oaMessage/@545trppy/?${encodeURIComponent('我想預約「有序」解碼諮詢')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-solid"
+        {/* 3 Service Cards */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '28px',
+          alignItems: 'stretch'
+        }}>
+          
+          {/* Card 1: Main Highlighted Service */}
+          <div 
+            className="glass-card" 
+            style={{
+              position: 'relative',
+              background: 'rgba(16, 82, 67, 0.65)',
+              border: '2px solid var(--color-bright-yellow)',
+              boxShadow: '0 12px 36px rgba(0, 0, 0, 0.35)',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              gap: '24px'
+            }}
           >
-            立即預約 <ExternalLink size={18} />
-          </a>
-        </div>
-      </div>
-    </section >
-  );
-};
+            <div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                <span style={{
+                  background: 'var(--color-bright-yellow)',
+                  color: '#002428',
+                  padding: '4px 12px',
+                  borderRadius: '99px',
+                  fontSize: '0.8rem',
+                  fontWeight: 700,
+                  letterSpacing: '0.05em'
+                }}>
+                  目前主要開放
+                </span>
+                <Heart size={20} style={{ color: 'var(--color-bright-yellow)' }} />
+              </div>
 
-export default Services;
+              <h3 style={{ fontSize: '1.4rem', color: 'var(--text-primary)', marginBottom: '12px' }}>
+                關係裡的情緒
+              </h3>
+              
+              <p style={{ color: 'var(--color-cream-light)', fontSize: '0.96rem', lineHeight: 1.7, marginBottom: 0 }}>
+                當你在一段關係裡反覆感到委屈、焦慮、憤怒或靠近不了，陪你理解彼此的互動模式，看見情緒背後的需要。
+              </p>
+            </div>
+
+            <a 
+              href="#consultation" 
+              className="btn btn-primary"
+              style={{ width: '100%', boxSizing: 'border-box' }}
+            >
+              <span>了解公益諮詢</span>
+              <ArrowRight size={16} />
+            </a>
+          </div>
+
+          {/* Card 2: Future Release */}
+          <div 
+            className="glass-card" 
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              gap: '24px',
+              opacity: 0.85
+            }}
+          >
+            <div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                <span style={{
+                  background: 'rgba(174, 176, 177, 0.15)',
+                  color: 'var(--color-muted-grey)',
+                  padding: '4px 12px',
+                  borderRadius: '99px',
+                  fontSize: '0.8rem',
+                  border: '1px solid rgba(174, 176, 177, 0.2)'
+                }}>
+                  後續開放
+                </span>
+                <Lock size={18} style={{ color: 'var(--color-muted-grey)' }} />
+              </div>
+
+              <h3 style={{ fontSize: '1.3rem', color: 'var(--text-primary)', marginBottom: '12px' }}>
+                自己的情緒與反應
+              </h3>
+
+              <p style={{ color: 'var(--color-muted-grey)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: 0 }}>
+                陪你整理熟悉的行為慣性，理解自己如何面對壓力、衝突與選擇，慢慢找回對自己的理解。
+              </p>
+            </div>
+
+            <button 
+              disabled
+              className="btn btn-outline"
+              style={{ width: '100%', opacity: 0.6, cursor: 'not-allowed' }}
+            >
+              <span>後續開放規劃</span>
+            </button>
+          </div>
+
+          {/* Card 3: Future Release */}
+          <div 
+            className="glass-card" 
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              gap: '24px',
+              opacity: 0.85
+            }}
+          >
+            <div>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
+                <span style={{
+                  background: 'rgba(174, 176, 177, 0.15)',
+                  color: 'var(--color-muted-grey)',
+                  padding: '4px 12px',
+                  borderRadius: '99px',
+                  fontSize: '0.8rem',
+                  border: '1px solid rgba(174, 176, 177, 0.2)'
+                }}>
+                  後續開放
+                </span>
+                <Lock size={18} style={{ color: 'var(--color-muted-grey)' }} />
+              </div>
+
+              <h3 style={{ fontSize: '1.3rem', color: 'var(--text-primary)', marginBottom: '12px' }}>
+                人生階段與選擇
+              </h3>
+
+              <p style={{ color: 'var(--color-muted-grey)', fontSize: '0.95rem', lineHeight: 1.7, marginBottom: 0 }}>
+                在工作、關係或人生轉換的時刻，陪你整理目前的狀態，思考什麼是此刻更適合自己的方向。
+              </p>
+            </div>
+
+            <button 
+              disabled
+              className="btn btn-outline"
+              style={{ width: '100%', opacity: 0.6, cursor: 'not-allowed' }}
+            >
+              <span>後續開放規劃</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
