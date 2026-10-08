@@ -1,62 +1,62 @@
 import React from 'react';
-import { HeartHandshake, Eye, MessageCircleQuestion, HelpCircle } from 'lucide-react';
+import { MessageCircleQuestion, HeartHandshake, HelpCircle } from 'lucide-react';
 
-const resonanceItems = [
+const cards = [
   {
-    icon: <MessageCircleQuestion size={24} style={{ color: 'var(--color-bright-yellow)' }} />,
-    text: "我總是在關係裡想很多",
-    desc: "反覆推敲對方的每一句話與冷淡，在心裡演練了千百種可能，卻越來越感到焦慮。"
+    icon: <MessageCircleQuestion size={22} style={{ color: 'var(--color-bright-yellow)' }} />,
+    title: "我總是在關係裡想很多"
   },
   {
-    icon: <HeartHandshake size={24} style={{ color: 'var(--color-bright-yellow)' }} />,
-    text: "我不知道怎麼表達自己的需要",
-    desc: "習慣先照顧別人的感受、當一個懂事的人，直到委屈累積成沈重的情緒。"
+    icon: <HeartHandshake size={22} style={{ color: 'var(--color-bright-yellow)' }} />,
+    title: "我不知道怎麼表達自己的需要"
   },
   {
-    icon: <Eye size={24} style={{ color: 'var(--color-bright-yellow)' }} />,
-    text: "我想靠近，卻又害怕受傷",
-    desc: "渴望深刻真實的連結，但只要關係稍微靠近，防衛機制就習慣性先轉身退開。"
-  },
-  {
-    icon: <HelpCircle size={24} style={{ color: 'var(--color-bright-yellow)' }} />,
-    text: "我想更了解自己為什麼會這樣反應",
-    desc: "明明知道自己不想這樣生氣或退縮，卻在特定情境下，一次次回到熟悉的模式。"
+    icon: <HelpCircle size={22} style={{ color: 'var(--color-bright-yellow)' }} />,
+    title: "我想更了解自己為什麼會這樣反應"
   }
 ];
 
 export default function Resonance() {
   return (
     <section className="section" style={{ backgroundColor: 'rgba(0, 36, 40, 0.4)' }}>
-      <div className="container">
+      <div className="container container-narrow">
         
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <div className="section-tag">
-            <span>關係裡的感受</span>
-          </div>
+        {/* 只回答：你理解我的狀態嗎？ */}
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <h2 className="section-title">
             你是否也曾在關係裡，感到困惑？
           </h2>
-          <div className="section-desc">
-            <p style={{ marginBottom: '8px' }}>明明很在意，卻不知道該怎麼說；想要靠近，卻又習慣先保護自己；</p>
-            <p style={{ marginBottom: '8px' }}>有些情緒反覆出現，卻始終說不清楚。明明知道自己不想這樣反應，卻一次次回到熟悉的模式。</p>
-            <p style={{ color: 'var(--color-cream-light)', marginTop: '16px', fontWeight: 400 }}>
-              有序相信，這些感受不是需要被急著否定的問題，而是值得被理解的訊息。
+          <div className="section-desc" style={{ marginBottom: '32px' }}>
+            <p style={{ margin: 0 }}>
+              明明很在意，卻不知道該怎麼說；想靠近，卻又習慣先保護自己。有些情緒反覆出現，卻始終說不清楚。
             </p>
           </div>
         </div>
 
-        {/* 4 Cards Grid */}
+        {/* 3 張精簡卡片（只顯示標題） */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-          gap: '24px'
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gap: '20px',
+          marginBottom: '36px'
         }}>
-          {resonanceItems.map((item, idx) => (
-            <div key={idx} className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {cards.map((item, idx) => (
+            <div 
+              key={idx} 
+              className="glass-card" 
+              style={{ 
+                padding: '24px 20px', 
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '14px'
+              }}
+            >
               <div style={{
-                width: '44px',
-                height: '44px',
-                borderRadius: '12px',
+                width: '42px',
+                height: '42px',
+                borderRadius: '50%',
                 background: 'rgba(248, 227, 71, 0.1)',
                 display: 'flex',
                 alignItems: 'center',
@@ -64,14 +64,18 @@ export default function Resonance() {
               }}>
                 {item.icon}
               </div>
-              <h3 style={{ fontSize: '1.2rem', color: 'var(--text-primary)', marginBottom: 0 }}>
-                {item.text}
+              <h3 style={{ fontSize: '1.08rem', color: 'var(--text-primary)', margin: 0, lineHeight: 1.5 }}>
+                {item.title}
               </h3>
-              <p style={{ fontSize: '0.92rem', color: 'var(--color-muted-grey)', lineHeight: 1.6, marginBottom: 0 }}>
-                {item.desc}
-              </p>
             </div>
           ))}
+        </div>
+
+        {/* 結尾句 */}
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ color: 'var(--color-cream-light)', fontSize: '1.05rem', margin: 0, fontWeight: 400 }}>
+            有序相信，這些感受不是需要被急著修正的問題，是值得被理解的訊息。
+          </p>
         </div>
 
       </div>

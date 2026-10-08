@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, MessageCircle } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 
 const LINE_BOOKING_URL = "https://line.me/R/oaMessage/@545trppy/?我想預約有序的公益諮詢";
 
@@ -23,7 +23,7 @@ export default function Navbar() {
       width: '100%',
       zIndex: 90,
       transition: 'all 0.3s ease',
-      backgroundColor: isScrolled ? 'rgba(0, 36, 40, 0.92)' : 'transparent',
+      backgroundColor: isScrolled ? 'rgba(0, 36, 40, 0.94)' : 'transparent',
       backdropFilter: isScrolled ? 'blur(16px)' : 'none',
       WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'none',
       borderBottom: isScrolled ? '1px solid var(--border-subtle)' : 'none',
@@ -32,35 +32,24 @@ export default function Navbar() {
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         
         {/* Logo */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-          <img src="/yousee-logo.png" alt="有序" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
-          <span style={{
-            fontSize: '1.25rem',
-            fontFamily: 'var(--font-serif)',
-            fontWeight: 600,
-            color: 'var(--text-primary)',
-            letterSpacing: '0.04em'
-          }}>
-            有序 YouSee
-          </span>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <img src="/yousee-logo-light.png" alt="有序 YouSee" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
         </a>
 
-        {/* Desktop Menu */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '28px' }} className="desktop-menu">
-          <a href="#about" style={{ color: 'var(--color-cream-light)', textDecoration: 'none', fontSize: '0.95rem' }}>關於有序</a>
-          <a href="#services" style={{ color: 'var(--color-cream-light)', textDecoration: 'none', fontSize: '0.95rem' }}>服務指引</a>
-          <a href="#consultation" style={{ color: 'var(--color-cream-light)', textDecoration: 'none', fontSize: '0.95rem' }}>公益諮詢</a>
-          <a href="#founder" style={{ color: 'var(--color-cream-light)', textDecoration: 'none', fontSize: '0.95rem' }}>主理人</a>
-          <a href="#faq" style={{ color: 'var(--color-cream-light)', textDecoration: 'none', fontSize: '0.95rem' }}>常見問題</a>
+        {/* Desktop Menu - 精簡為 4 個入口 */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '32px' }} className="desktop-menu">
+          <a href="#about" style={{ color: 'var(--color-cream-light)', textDecoration: 'none', fontSize: '0.95rem', letterSpacing: '0.06em' }}>關於有序</a>
+          <a href="#consultation" style={{ color: 'var(--color-cream-light)', textDecoration: 'none', fontSize: '0.95rem', letterSpacing: '0.06em' }}>公益諮詢</a>
+          <a href="#faq" style={{ color: 'var(--color-cream-light)', textDecoration: 'none', fontSize: '0.95rem', letterSpacing: '0.06em' }}>常見問題</a>
           
           <a 
             href={LINE_BOOKING_URL} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn btn-primary"
-            style={{ padding: '8px 20px', fontSize: '0.9rem' }}
+            style={{ padding: '8px 22px', fontSize: '0.9rem', letterSpacing: '0.06em' }}
           >
-            <span>預約諮詢</span>
+            <span>預約公益諮詢</span>
             <ArrowRight size={15} />
           </a>
         </div>
@@ -89,12 +78,10 @@ export default function Navbar() {
           padding: '24px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '16px'
+          gap: '18px'
         }}>
           <a href="#about" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '1.05rem' }}>關於有序</a>
-          <a href="#services" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '1.05rem' }}>服務指引</a>
           <a href="#consultation" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '1.05rem' }}>公益諮詢</a>
-          <a href="#founder" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '1.05rem' }}>主理人</a>
           <a href="#faq" onClick={() => setMobileMenuOpen(false)} style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '1.05rem' }}>常見問題</a>
           <a 
             href={LINE_BOOKING_URL} 
@@ -103,7 +90,7 @@ export default function Navbar() {
             className="btn btn-primary"
             style={{ marginTop: '8px', textAlign: 'center' }}
           >
-            <span>預約公益諮詢 (LINE)</span>
+            <span>預約公益諮詢</span>
           </a>
         </div>
       )}
