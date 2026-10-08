@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 
-const LINE_BOOKING_URL = "https://line.me/R/oaMessage/@545trppy/?我想預約有序的公益諮詢";
+const LINE_BOOKING_URL = "https://line.me/R/ti/p/@545trppy";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);

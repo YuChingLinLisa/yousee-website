@@ -36,7 +36,7 @@ export default function About() {
             <p style={{ marginBottom: '14px' }}>
               彩虹數字會從你的出生資料出發，整理你在不同情境中的行為傾向與情緒反應。
             </p>
-            <p style={{ color: 'var(--color-cream-light)', margin: 0 }}>
+            <p style={{ color: 'var(--color-cream-light)', margin: 0, fontWeight: 600, letterSpacing: '0.07em' }}>
               透過這個角度，我們一起看看：你為什麼會這樣反應，以及現在的你，是否有更適合自己的選擇。
             </p>
           </div>

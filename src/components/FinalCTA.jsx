@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-const LINE_BOOKING_URL = "https://line.me/R/oaMessage/@545trppy/?我想預約有序的公益諮詢";
+const LINE_BOOKING_URL = "https://line.me/R/ti/p/@545trppy";
 
 export default function FinalCTA() {
   return (
@@ -18,7 +18,7 @@ export default function FinalCTA() {
             letterSpacing: '0.08em'
           }}
         >
-          讓理解自己，成為關係改變的開始
+          讓理解自己，成為整理生活的起點
         </h2>
 
         <p style={{ 
@@ -27,9 +27,9 @@ export default function FinalCTA() {
           maxWidth: '560px', 
           margin: '0 auto 36px auto',
           lineHeight: 1.8,
-          letterSpacing: '0.05em'
+          letterSpacing: '0.06em'
         }}>
-          不需要先把故事整理完整，從你現在最想理解的地方開始就好。
+          給自己一段時間，在重要時刻，多看見自己一點。
         </p>
 
         <div>
@@ -40,7 +40,7 @@ export default function FinalCTA() {
             className="btn btn-primary"
             style={{ fontSize: '1.05rem', padding: '15px 38px', letterSpacing: '0.08em' }}
           >
-            <span>預約公益諮詢</span>
+            <span>預約 40 分鐘公益諮詢</span>
             <ArrowRight size={18} />
           </a>
         </div>

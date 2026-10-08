@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-const LINE_BOOKING_URL = "https://line.me/R/oaMessage/@545trppy/?我想預約有序的公益諮詢";
+const LINE_BOOKING_URL = "https://line.me/R/ti/p/@545trppy";
 
 export default function Hero() {
   return (
@@ -62,7 +62,7 @@ export default function Hero() {
             className="btn btn-primary"
             style={{ letterSpacing: '0.08em' }}
           >
-            <span>預約公益諮詢</span>
+            <span>預約 40 分鐘公益諮詢</span>
             <ArrowRight size={18} />
           </a>
           <a 
